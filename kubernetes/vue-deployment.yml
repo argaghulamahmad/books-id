@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: vue
-          image: mjhea0/vue-kubernetes:latest
+          image: argaghulamahmad/vue-kubernetes:latest
       restartPolicy: Always
   selector:
     matchLabels:

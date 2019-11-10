@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flask
-          image: mjhea0/flask-kubernetes:latest
+          image: argaghulamahmad/flask-kubernetes:latest
           env:
             - name: FLASK_ENV
               value: "development"
