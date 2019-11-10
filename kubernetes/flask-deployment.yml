@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flask
-          image: argaghulamahmad/kubernetes-final-project_server:latest
+          image: argaghulamahmad/flask-kubernetes:latest
           imagePullPolicy: IfNotPresent
           env:
             - name: FLASK_ENV
