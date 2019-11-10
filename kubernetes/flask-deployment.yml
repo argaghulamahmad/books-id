@@ -15,7 +15,6 @@ spec:
       containers:
         - name: flask
           image: mjhea0/flask-kubernetes:latest
-          imagePullPolicy: IfNotPresent
           env:
             - name: FLASK_ENV
               value: "development"
