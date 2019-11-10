@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask
+  labels:
+    app: flask
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: flask
+      labels:
+        app: flask
+    spec:
+      containers:
+        - name: flask
+          image: argaghulamahmad/kubernetes-final-project_server:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: FLASK_ENV
+              value: "development"
+            - name: APP_SETTINGS
+              value: "project.config.DevelopmentConfig"
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: user
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: password
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: flask
