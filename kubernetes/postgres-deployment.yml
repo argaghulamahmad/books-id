@@ -12,6 +12,7 @@ spec:
       name: postgres
       labels:
         app: postgres
+        service: postgres
     spec:
       containers:
         - name: postgres

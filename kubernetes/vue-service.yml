@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: vue
+  labels:
+    app: vue
+    service: vue
 spec:
   selector:
     app: vue

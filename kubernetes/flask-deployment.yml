@@ -4,11 +4,11 @@ metadata:
   name: flask
   labels:
     app: flask
+    name: flask
 spec:
   replicas: 1
   template:
     metadata:
-      name: flask
       labels:
         app: flask
     spec:
