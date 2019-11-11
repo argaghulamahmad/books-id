@@ -27,6 +27,8 @@ spec:
                 secretKeyRef:
                   name: postgres-credentials
                   key: password
+          ports:
+            - containerPort: 5432
           volumeMounts:
             - name: postgres-volume-mount
               mountPath: /var/lib/postgresql/data
