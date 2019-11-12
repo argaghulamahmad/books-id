@@ -4,13 +4,24 @@ metadata:
   name: minikube-ingress
 spec:
   rules:
-    - host: hello.world
+    - host: books.id
       http:
         paths:
           - path: /
             backend:
               serviceName: vue
               servicePort: 8080
+          - path: /books
+            backend:
+              serviceName: flask
+              servicePort: 5000
+    - host: admin.books.id
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: vue-admin
+              servicePort: 8081
           - path: /books
             backend:
               serviceName: flask
