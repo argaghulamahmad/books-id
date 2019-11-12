@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vue-admin
+  labels:
+    app: vue-admin
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: vue-admin
+      labels:
+        app: vue-admin
+    spec:
+      containers:
+        - name: vue-admin
+          image: argaghulamahmad/vue-kubernetes-admin:latest
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: vue-admin

@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     getMessage() {
-      const path = 'http://books.id/books/ping';
+      const path = 'http://admin.books.id/books/ping';
       axios.get(path)
         .then((res) => {
           this.msg = res.data;

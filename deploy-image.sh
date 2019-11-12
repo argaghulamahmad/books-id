@@ -4,3 +4,6 @@ docker push argaghulamahmad/flask-kubernetes
 
 docker build -t argaghulamahmad/vue-kubernetes ./services/client -f ./services/client/Dockerfile-minikube
 docker push argaghulamahmad/vue-kubernetes
+
+docker build -t argaghulamahmad/vue-kubernetes-admin ./services/client-admin/ -f ./services/client-admin/Dockerfile-minikube
+docker push argaghulamahmad/vue-kubernetes-admin
