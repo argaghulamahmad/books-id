@@ -12,7 +12,7 @@
             <tr>
               <th scope="col">Title</th>
               <th scope="col">Author</th>
-              <th scope="col">Read?</th>
+              <th scope="col">Available?</th>
               <th></th>
             </tr>
           </thead>
@@ -71,7 +71,7 @@
           </b-form-group>
         <b-form-group id="form-read-group">
           <b-form-checkbox-group v-model="addBookForm.read" id="form-checks">
-            <b-form-checkbox value="true">Read?</b-form-checkbox>
+            <b-form-checkbox value="true">Available?</b-form-checkbox>
           </b-form-checkbox-group>
         </b-form-group>
         <b-button type="submit" variant="primary">Submit</b-button>
@@ -105,7 +105,7 @@
           </b-form-group>
         <b-form-group id="form-read-edit-group">
           <b-form-checkbox-group v-model="editForm.read" id="form-checks">
-            <b-form-checkbox value="true">Read?</b-form-checkbox>
+            <b-form-checkbox value="true">Available?</b-form-checkbox>
           </b-form-checkbox-group>
         </b-form-group>
         <b-button type="submit" variant="primary">Update</b-button>
