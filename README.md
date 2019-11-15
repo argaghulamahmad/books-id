@@ -20,6 +20,12 @@ Berikut dependensi (disarankan versi terbaru) yang dibutuhkan untuk menjalankan 
 - Minikube
 - Docker
 ### Cara Menjalankan Aplikasi
+Aktifkan beberapa addons minikube berikut
+```bash
+minikube addons enable dashboard
+minikube addons enable ingress
+minikube addons enable heapster
+```
 Jalankan minikube dengan perintah 
 ```bash
 minikube start
