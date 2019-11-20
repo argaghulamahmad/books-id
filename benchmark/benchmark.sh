@@ -3,8 +3,23 @@
 numofconnections=10000
 numofconcurency=1000
 
-for url in $(cat urls.txt) ; do
-        printf "[Start]: Start benchmarking %s service! \n\n" ${url}
-        ab -n ${numofconnections} -c ${numofconcurency} ${url}
-        printf "[End]: Benchmarking %s service is complete! \n\n\n" ${url}
-done
+printf "[Start]: Start benchmarking vue service! \n\n"
+ab -n ${numofconnections} -c ${numofconcurency} -g vue.tsv "http://books.id/"
+printf "[End]: Benchmarking vue service is complete! \n\n\n"
+
+printf "[Start]: Start benchmarking vue-admin service! \n\n"
+ab -n ${numofconnections} -c ${numofconcurency} -g vue-admin.tsv "http://admin.books.id/"
+printf "[End]: Benchmarking vue-admin service is complete! \n\n\n"
+
+printf "[Start]: Start benchmarking flask service! \n\n"
+ab -n ${numofconnections} -c ${numofconcurency} -g flask.tsv "http://books.id/books"
+printf "[End]: Benchmarking flask service is complete! \n\n\n"
+
+printf "[Start]: Start benchmarking flask-admin service! \n\n"
+ab -n ${numofconnections} -c ${numofconcurency} -g flask-admin.tsv "http://admin.books.id/books"
+printf "[End]: Benchmarking flask-admin is complete! \n\n\n"
+
+gnuplot -p "flask-admin-benchmark.p"
+gnuplot -p "flask-benchmark.p"
+gnuplot -p "vue-admin-benchmark.p"
+gnuplot -p "vue-benchmark.p"
