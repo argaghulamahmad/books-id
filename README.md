@@ -65,7 +65,7 @@ Berikut dependensi (disarankan versi terbaru) yang dibutuhkan untuk menjalankan 
 - Ubuntu 18
 - Apache Benchmark
 - GNU Plot
-### How to benchmarking all services
+### How to measure the performance of all services
 Pindah directory ke `benchmark`
 ```bash
 cd benchmark
