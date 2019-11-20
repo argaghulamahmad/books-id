@@ -21,8 +21,8 @@ spec:
           - path: /
             backend:
               serviceName: vue-admin
-              servicePort: 8081
+              servicePort: 8080
           - path: /books
             backend:
-              serviceName: flask
+              serviceName: flask-admin
               servicePort: 5000

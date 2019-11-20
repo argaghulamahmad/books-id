@@ -27,6 +27,12 @@ kubectl create -f ./kubernetes/flask-deployment.yml
 kubectl create -f ./kubernetes/flask-service.yml
 kubectl autoscale deployment flask --min=${min} --max=${max}
 
+echo "Creating the flask admin deployment and service..."
+
+kubectl create -f ./kubernetes/flask-admin-deployment.yml
+kubectl create -f ./kubernetes/flask-admin.service.yml
+kubectl autoscale deployment flask-admin --min=${min} --max=${max}
+
 echo "Adding the ingress..."
 
 minikube addons enable ingress

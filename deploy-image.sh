@@ -2,6 +2,9 @@
 docker build -t argaghulamahmad/flask-kubernetes ./services/server
 docker push argaghulamahmad/flask-kubernetes
 
+docker build -t argaghulamahmad/flask-kubernetes-admin ./services/server-admin/
+docker push argaghulamahmad/flask-kubernetes-admin
+
 docker build -t argaghulamahmad/vue-kubernetes ./services/client -f ./services/client/Dockerfile-minikube
 docker push argaghulamahmad/vue-kubernetes
 
