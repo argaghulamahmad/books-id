@@ -9,17 +9,19 @@
 - Developer and Application Architect
     - Arga Ghulam Ahmad
 - Performance Analyst
+    - Arga Ghulam Ahmad
     - Aditya Yudha Pratama
     - Made Wira Dhanar Santika
     - Harlan Haidi
-## Bagaimana Menjalankan Aplikasi Ini
+## How To Run?
 ### Requirements
 Berikut dependensi (disarankan versi terbaru) yang dibutuhkan untuk menjalankan aplikasi ini
+- Ubuntu 18
 - Kubernetes
 - VirtualBox Hypervisor
 - Minikube
 - Docker
-### Cara Menjalankan Aplikasi
+### How to deploy and run application (all services)
 Aktifkan beberapa addons minikube berikut
 ```bash
 minikube addons enable dashboard
@@ -57,3 +59,21 @@ Apabila tidak ada error apapun, maka aplikasi siap untuk digunakan.
 Silahkan buka link berikut untuk menggunakan aplikasi
 - [Client Application](http://books.id)
 - [Admin Application](http://admin.books.id)
+## Performance Benchmarking
+### Requirements
+Berikut dependensi (disarankan versi terbaru) yang dibutuhkan untuk menjalankan aplikasi ini
+- Ubuntu 18
+- Apache Benchmark
+- GNU Plot
+### How to benchmarking all services
+Pindah directory ke `benchmark`
+```bash
+cd benchmark
+```
+Jalankan script `benchmark.sh`
+```bash
+chmod +x
+./benchmark.sh
+```
+Output dari script tersebut berupa file tsv (benchmarking log data) dan file jpg (benchmarking log data visualization).
+Silahkan analisis graph yang ada di file jpg dan masukkan ke laporan akhir.
